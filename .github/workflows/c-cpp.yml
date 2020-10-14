@@ -15,3 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Clone
       run: git clone --branch 2020.01 https://github.com/microsoft/vcpkg.git
+    - name: Build VCPKG
+      run: bootstrap-vcpkg.bat
+    - name: Integrate with VS
+      run: vcpkg integrate install

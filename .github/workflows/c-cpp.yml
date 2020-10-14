@@ -22,9 +22,9 @@ jobs:
     - name: Install C++ REST SDK
       run: vcpkg install cpprestsdk:x64-windows-static
     - name: Create Build Dir
-      run: mkdir build && cd build
+      run: mkdir build
     - name: Prepare for build
-      run: cmake .. -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+      run: cd build && cmake .. -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
     - name: Build RPC
-      run: cmake --build . --config Debug
+      run: cd build && cmake --build . --config Debug
       

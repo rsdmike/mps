@@ -24,7 +24,7 @@ jobs:
     - name: Create Build Dir
       run: mkdir build
     - name: Prepare for build
-      run: cd build && cmake .. -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+      run: cd build && cmake .. -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
     - name: Build RPC
       run: cd build && cmake --build . --config Debug
       

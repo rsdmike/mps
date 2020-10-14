@@ -14,8 +14,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Clone
-      run: git clone --branch 2020.01 https://github.com/microsoft/vcpkg.git
+      run: git clone --branch 2020.01 https://github.com/microsoft/vcpkg.git && cd vcpkg
     - name: Build VCPKG
       run: bootstrap-vcpkg.bat
     - name: Integrate with VS
       run: vcpkg integrate install
+    - name: Install C++ REST SDK
+      run: vcpkg install cpprestsdk:x64-windows-static
+    - name: Create Build Dir
+      run: mkdir build && cd build
+    - name: Prepare for build
+      run: cmake .. -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
+    - name: Build RPC
+      run: cmake --build . --config Debug
+      

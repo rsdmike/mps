@@ -83,7 +83,7 @@ response:
                type: string
 ```
 
-Click [here](methods\types.md) for supported input and output types.
+Click [here](methods/types.md) for supported input and output types.
 
 Example Value
 

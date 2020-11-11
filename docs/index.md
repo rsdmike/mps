@@ -242,3 +242,4 @@ Certificates are generated and stored in private folder.
 !!! info "Device credentials"
 
     Make sure that AMT guid entry is present in credential.json file. Also include the AMT guid in guids.json file if *usewhitelist* is set to *true* in config.json file.
+

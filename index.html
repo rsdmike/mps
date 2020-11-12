@@ -6,8 +6,6 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Management Presence Server (MPS) that will serve as the broker between the management console and the Intel® AMT clients">
-      
       
       
       
@@ -16,7 +14,7 @@
     
     
       
-        <title>MPS Service</title>
+        <title>Active Edge: Remote Edge Management Toolkit</title>
       
     
     
@@ -24,10 +22,6 @@
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.f0267088.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#02a6f2">
         
       
     
@@ -42,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="assets/stylesheets/branding.css">
+    
     
       
     
@@ -54,7 +50,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
       
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -63,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#get-started" class="md-skip">
+        <a href="#active-edge-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -76,10 +72,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="." title="MPS Service" class="md-header-nav__button md-logo" aria-label="MPS Service">
+    <a href="." title="Active Edge: Remote Edge Management Toolkit" class="md-header-nav__button md-logo" aria-label="Active Edge: Remote Edge Management Toolkit">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="assets/images/logo-white-75px.png" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -89,11 +84,11 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            MPS Service
+            Active Edge: Remote Edge Management Toolkit
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Getting started
+              Home
             
           </span>
         </div>
@@ -131,12 +126,136 @@
 </div>
     
     
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/open-amt-cloud-toolkit/mps/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    open-amt-cloud-toolkit/mps
+  </div>
+</a>
+      </div>
+    
   </nav>
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="." class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="Local/overview/" class="md-tabs__link">
+          Getting Started
+        </a>
+      
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="General/manageDevice/" class="md-tabs__link">
+          Microservices
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="Docker/dockerCloud/" class="md-tabs__link">
+          Tutorials
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="APIs/indexMPS/" class="md-tabs__link">
+          APIs
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="Topics/misc/" class="md-tabs__link">
+          Active Edge Topics
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
         
       
       <main class="md-main" data-md-component="main">
@@ -150,28 +269,28 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="MPS Service" class="md-nav__button md-logo" aria-label="MPS Service">
+    <a href="." title="Active Edge: Remote Edge Management Toolkit" class="md-nav__button md-logo" aria-label="Active Edge: Remote Edge Management Toolkit">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="assets/images/logo-white-75px.png" alt="logo">
 
     </a>
-    MPS Service
+    Active Edge: Remote Edge Management Toolkit
   </label>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+    <div class="md-nav__source">
+      
+<a href="https://github.com/open-amt-cloud-toolkit/mps/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
     
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="activateAMT/" class="md-nav__link">
-      Activate AMT
-    </a>
-  </li>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    open-amt-cloud-toolkit/mps
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
       
@@ -188,12 +307,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Getting started
+        Home
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="." class="md-nav__link md-nav__link--active">
-      Getting started
+      Home
     </a>
     
       
@@ -210,37 +329,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview-of-the-management-presence-server-mps" class="md-nav__link">
-    Overview of the Management Presence Server (MPS)
+  <a href="#goals" class="md-nav__link">
+    Goals
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#requirements-for-mps-server" class="md-nav__link">
-    Requirements for MPS Server
+  <a href="#active-edge-setup" class="md-nav__link">
+    Active Edge Setup
   </a>
   
-    <nav class="md-nav" aria-label="Requirements for MPS Server">
+    <nav class="md-nav" aria-label="Active Edge Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#software-requirements" class="md-nav__link">
-    Software Requirements
+  <a href="#build-and-deploy-microservices-locally" class="md-nav__link">
+    Build and Deploy Microservices Locally
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hardware-requirements" class="md-nav__link">
-    Hardware Requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#supported-platforms" class="md-nav__link">
-    Supported Platforms
+  <a href="#build-and-deploy-microservices-with-local-docker-images" class="md-nav__link">
+    Build and Deploy Microservices with Local Docker* Images
   </a>
   
 </li>
@@ -251,57 +363,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mps-server-set-up" class="md-nav__link">
-    MPS Server: Set Up
+  <a href="#additional-intel-amt-resources" class="md-nav__link">
+    Additional Intel® AMT Resources
   </a>
-  
-    <nav class="md-nav" aria-label="MPS Server: Set Up">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-clone-the-repository" class="md-nav__link">
-    1. Clone the repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-addmodify-configjson" class="md-nav__link">
-    2. Add/modify config.json
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-addmodify-credentialsjson" class="md-nav__link">
-    3. Add/modify credentials.json
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-addmodify-guidsjson" class="md-nav__link">
-    4. Add/modify guids.json
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-start-the-server" class="md-nav__link">
-    5. Start the server
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-connect-an-amt-device" class="md-nav__link">
-    6. Connect an AMT device
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -317,10 +381,350 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Installation MPS & RPS
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Installation MPS & RPS" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        Installation MPS & RPS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-1" type="checkbox" id="nav-2-1-1">
+    
+    <label class="md-nav__link" for="nav-2-1-1">
+      Local Setup
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Local Setup" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        Local Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="api/" class="md-nav__link">
-      API
+    <a href="Local/overview/" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Local/installMPS/" class="md-nav__link">
+      Install MPS Locally
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Local/installRPS/" class="md-nav__link">
+      Install RPS Locally
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-2" type="checkbox" id="nav-2-1-2">
+    
+    <label class="md-nav__link" for="nav-2-1-2">
+      Docker* Images
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Docker* Images" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        Docker* Images
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Docker/overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Docker/dockerLocal/" class="md-nav__link">
+      Build Docker* Images
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Microservices
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Microservices" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Microservices
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Managed Presence Server
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Managed Presence Server" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        Managed Presence Server
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="General/manageDevice/" class="md-nav__link">
+      MPS Device Management
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Remote Provisioning Server
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Remote Provisioning Server" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        Remote Provisioning Server
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="General/loginToRPS/" class="md-nav__link">
+      Login to RPS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="General/createCIRAConfig/" class="md-nav__link">
+      Create a CIRA Config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="General/createProfileCCM/" class="md-nav__link">
+      Create a Profile with CCM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="General/createProfileACM/" class="md-nav__link">
+      Create a Profile with ACM
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Remote Provisioning Client
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Remote Provisioning Client" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon"></span>
+        Remote Provisioning Client
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="General/buildRPC_GithubActions/" class="md-nav__link">
+      Build & Run RPC (GitHub Actions)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="General/buildRPC/" class="md-nav__link">
+      Build & Run RPC (manual)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -334,13 +738,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Admin Methods
+      Tutorials
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Admin Methods" data-md-level="1">
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        Admin Methods
+        Tutorials
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -351,8 +755,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/alldevices/" class="md-nav__link">
-      All Devices
+    <a href="Docker/dockerCloud/" class="md-nav__link">
+      Docker Images on the Cloud
     </a>
   </li>
 
@@ -363,8 +767,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/connecteddevices/" class="md-nav__link">
-      Connected Devices
+    <a href="Tutorials/uitoolkit/" class="md-nav__link">
+      Create Consoles with the UI Toolkit
     </a>
   </li>
 
@@ -375,8 +779,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/disconnect/" class="md-nav__link">
-      Disconnect
+    <a href="Tutorials/apiTutorial/" class="md-nav__link">
+      Construct a REST API Call
     </a>
   </li>
 
@@ -387,8 +791,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/mescript/" class="md-nav__link">
-      MEScript
+    <a href="Tutorials/addDatabase/" class="md-nav__link">
+      Add a Database
     </a>
   </li>
 
@@ -399,8 +803,20 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/rootcertificate/" class="md-nav__link">
-      MPS Root Certificate
+    <a href="Tutorials/addVault/" class="md-nav__link">
+      Add Vault Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Tutorials/allowlist/" class="md-nav__link">
+      Use an Allowlist
     </a>
   </li>
 
@@ -420,13 +836,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      AMT Methods
+      APIs
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="AMT Methods" data-md-level="1">
+    <nav class="md-nav" aria-label="APIs" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
         <span class="md-nav__icon md-icon"></span>
-        AMT Methods
+        APIs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -437,8 +853,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/auditlog/" class="md-nav__link">
-      Audit log
+    <a href="APIs/indexMPS/" class="md-nav__link">
+      MPS Methods
     </a>
   </li>
 
@@ -449,80 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/eventlog/" class="md-nav__link">
-      Event log
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/generalsettings/" class="md-nav__link">
-      General settings
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/hardwareinfo/" class="md-nav__link">
-      Hardware information
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/poweraction/" class="md-nav__link">
-      Power action
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/powercapabilities/" class="md-nav__link">
-      Power capabilities
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/powerstate/" class="md-nav__link">
-      Power state
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/version/" class="md-nav__link">
-      Version
+    <a href="APIs/indexRPS/" class="md-nav__link">
+      RPS Methods
     </a>
   </li>
 
@@ -537,18 +881,30 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="security/" class="md-nav__link">
+      Security
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
-      Types
+    <label class="md-nav__link" for="nav-7">
+      Active Edge Topics
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Types" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+    <nav class="md-nav" aria-label="Active Edge Topics" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
         <span class="md-nav__icon md-icon"></span>
-        Types
+        Active Edge Topics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -559,8 +915,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      Request body
+    <a href="Topics/misc/" class="md-nav__link">
+      Static and Dynamic IPs
     </a>
   </li>
 
@@ -571,8 +927,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      Response error body
+    <a href="Topics/guids/" class="md-nav__link">
+      GUIDs in Intel AMT
     </a>
   </li>
 
@@ -583,8 +939,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      Audit log
+    <a href="Topics/mebx/" class="md-nav__link">
+      Manually Configure and Unprovision
     </a>
   </li>
 
@@ -595,80 +951,8 @@
 
 
   <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      Event log
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      General Settings
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      Hardware information
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      Power action
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      Power capabilities
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      Power state
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="methods/types/" class="md-nav__link">
-      Version
+    <a href="Topics/proxies/" class="md-nav__link">
+      Proxies
     </a>
   </li>
 
@@ -702,6 +986,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="troubleshooting/" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -726,37 +1022,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview-of-the-management-presence-server-mps" class="md-nav__link">
-    Overview of the Management Presence Server (MPS)
+  <a href="#goals" class="md-nav__link">
+    Goals
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#requirements-for-mps-server" class="md-nav__link">
-    Requirements for MPS Server
+  <a href="#active-edge-setup" class="md-nav__link">
+    Active Edge Setup
   </a>
   
-    <nav class="md-nav" aria-label="Requirements for MPS Server">
+    <nav class="md-nav" aria-label="Active Edge Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#software-requirements" class="md-nav__link">
-    Software Requirements
+  <a href="#build-and-deploy-microservices-locally" class="md-nav__link">
+    Build and Deploy Microservices Locally
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hardware-requirements" class="md-nav__link">
-    Hardware Requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#supported-platforms" class="md-nav__link">
-    Supported Platforms
+  <a href="#build-and-deploy-microservices-with-local-docker-images" class="md-nav__link">
+    Build and Deploy Microservices with Local Docker* Images
   </a>
   
 </li>
@@ -767,57 +1056,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mps-server-set-up" class="md-nav__link">
-    MPS Server: Set Up
+  <a href="#additional-intel-amt-resources" class="md-nav__link">
+    Additional Intel® AMT Resources
   </a>
-  
-    <nav class="md-nav" aria-label="MPS Server: Set Up">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-clone-the-repository" class="md-nav__link">
-    1. Clone the repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-addmodify-configjson" class="md-nav__link">
-    2. Add/modify config.json
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-addmodify-credentialsjson" class="md-nav__link">
-    3. Add/modify credentials.json
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-addmodify-guidsjson" class="md-nav__link">
-    4. Add/modify guids.json
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-start-the-server" class="md-nav__link">
-    5. Start the server
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-connect-an-amt-device" class="md-nav__link">
-    6. Connect an AMT device
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -833,286 +1074,50 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/open-amt-cloud-toolkit/mps/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
                 
-                <h1 id="get-started">Get started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h1>
-<p>The instructions in this document offers the following guidance:</p>
+                
+                <h1 id="active-edge-overview">Active Edge Overview<a class="headerlink" href="#active-edge-overview" title="Permanent link">&para;</a></h1>
+<p>Intel® vPro™ Platforms offer hardware-enhanced security features and remote manageability, also known as out-of-band manageability, using Intel® Active Management Technology (Intel&reg; AMT). With Intel&reg; AMT, administrators remotely manage, repair, and update network assets, such as systems and edge devices. In the event that a network asset is powered off or the operating system is unavailable, administrators can power on the asset. </p>
+<p>Active Edge provides open-source, modular microservices and libraries for integration of hardware provisioning, out-of-band manageability, and other Intel&reg; AMT features with both new and existing management consoles, software solutions, and more. As an open source implementation, Active Edge makes it easier for IT departments and ISVs to adopt, integrate, and customize out-of-band management solutions for Intel® vPro™ Platforms.</p>
+<p>Read more about Intel&reg; AMT features and capabilities <a href="https://software.intel.com/content/www/us/en/develop/topics/iot/hardware/vpro-platform-retail.html">here</a>.</p>
+<h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
+<p>The Active Edge guides provides instructions to:</p>
 <ul>
-<li>Set up the Management Presence Server</li>
-<li>Modify json configuration sample files</li>
-<li>Connect to an activated AMT device</li>
+<li>Deploy the Management Presence Server (MPS) and Remote Provisioning Server (RPS) on the development system.</li>
+<li>Build and run Remote Provisioning client (RPC) on the managed device.</li>
+<li>Connect the managed device (edge device)</li>
 </ul>
-<h2 id="overview-of-the-management-presence-server-mps">Overview of the Management Presence Server (MPS)<a class="headerlink" href="#overview-of-the-management-presence-server-mps" title="Permanent link">&para;</a></h2>
-<p>MPS is cloud agnostic microservice that enables Intel AMT-based platforms connecting over the Internet to connect securely to manageability consoles. The image below is a representation of using MPS server connected to an activated AMT device.</p>
-<p><a href="assets/images/mpsdiagram_final.png"><img alt="mps" src="assets/images/mpsdiagram_final.png" /></a></p>
-<h2 id="requirements-for-mps-server">Requirements for MPS Server<a class="headerlink" href="#requirements-for-mps-server" title="Permanent link">&para;</a></h2>
-<h3 id="software-requirements">Software Requirements<a class="headerlink" href="#software-requirements" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://git-scm.com/downloads">git</a></li>
-<li><a href="https://nodejs.org/dist/latest-v10.x/">node.js v10 or greater</a></li>
-</ul>
-<h3 id="hardware-requirements">Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="activateAMT/">Activated Device with Intel&reg; AMT</a></li>
-<li>Computer or device used to connect to MPS server</li>
-<li>Computer or device to connect the client console</li>
-</ul>
-<h3 id="supported-platforms">Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h3>
-<p>The MPS server can run on all platforms that support node.js. One consideration is exposing ports on the server used to run MPS. Typically, these are:</p>
-<ul>
-<li>3000</li>
-<li>4433 </li>
-</ul>
-<h2 id="mps-server-set-up">MPS Server: Set Up<a class="headerlink" href="#mps-server-set-up" title="Permanent link">&para;</a></h2>
-<p>The instructions below are performed on the MPS server. To begin, run a platform that supports nodejs. </p>
-<p>Example:</p>
-<ul>
-<li>Virtual Machine with nodejs support</li>
-<li>Dedicated Server with nodejs support</li>
-</ul>
-<p>Once the software pre-requisites are met for the MPS, you can begin the rest of the set up of MPS. </p>
-<h3 id="1-clone-the-repository">1. Clone the repository<a class="headerlink" href="#1-clone-the-repository" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/MPS.git
-cd MPS
-</code></pre></div>
-
-<h3 id="2-addmodify-configjson">2. Add/modify config.json<a class="headerlink" href="#2-addmodify-configjson" title="Permanent link">&para;</a></h3>
-<p>Navigate to the private directory within the MPS directory,</p>
-<div class="codehilite"><pre><span></span><code>cd ~/MPS/private
-</code></pre></div>
-
-<p>Create a <strong>config.json</strong> file.
-     *Copy the example file in the directory.</p>
-<div class="codehilite"><pre><span></span><code>cp config.json.example config.json
-</code></pre></div>
-
-<p>These following parameters can be configured.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><strong>usewhitelist</strong></td>
-<td align="left">set to true to whitelist AMT GUIDs stored in guids.json</td>
-</tr>
-<tr>
-<td align="left"><strong>commonName</strong></td>
-<td align="left">used in self signed certificate, can be either FQDN or IP address</td>
-</tr>
-<tr>
-<td align="left"><strong>mpsport</strong></td>
-<td align="left">port</td>
-</tr>
-<tr>
-<td align="left"><strong>mpsusername</strong></td>
-<td align="left">new username for mpsusername set during this current process</td>
-</tr>
-<tr>
-<td align="left"><strong>mpspass</strong></td>
-<td align="left">new password for the user set during this current process</td>
-</tr>
-<tr>
-<td align="left"><strong>useglobalmpscredentials</strong></td>
-<td align="left">When set to true, any device using <strong>mpsusername</strong> and  <em>mpspass</em> in config.json are allowed to connect. When set to false, MPS validates credentials sent by AMT device using credentials.json.</td>
-</tr>
-<tr>
-<td align="left"><strong>country</strong></td>
-<td align="left">name of country</td>
-</tr>
-<tr>
-<td align="left"><strong>company</strong></td>
-<td align="left">name of company</td>
-</tr>
-<tr>
-<td align="left"><strong>debug</strong></td>
-<td align="left">debug option set to true or false</td>
-</tr>
-<tr>
-<td align="left"><strong>listenany</strong></td>
-<td align="left">listen to any set to true or false</td>
-</tr>
-<tr>
-<td align="left"><strong>https</strong></td>
-<td align="left">set to true to enable TLS on HTTP server</td>
-</tr>
-<tr>
-<td align="left"><strong>mpstlsoffload</strong></td>
-<td align="left">set to true to run MPS without TLS</td>
-</tr>
-<tr>
-<td align="left"><strong>webport</strong></td>
-<td align="left">Port used by WebServer (or HTTP server)</td>
-</tr>
-<tr>
-<td align="left"><strong>generateCertificates</strong></td>
-<td align="left">Generates certificates automatically. When set to true, SSL and Root cert are generated and stored in private folder</td>
-</tr>
-<tr>
-<td align="left"><strong>loggeroff</strong>:</td>
-<td align="left">Logging is enabled by default. Set to <strong>true</strong> to disable logging.</td>
-</tr>
-</tbody>
-</table>
-<p>mpusername and mpspass can be set to whatever credentials you choose to set, at this time. This will math the mpsusername and mpspass in other config files edited during this process.</p>
-<p>For example:</p>
-<div class="codehilite"><pre><span></span><code>        {
-                &quot;usewhitelist&quot; : false,
-                &quot;commonName&quot;: &quot;iot-demosetup.lab.local.com&quot;,
-                &quot;mpsport&quot;: 4433,
-                &quot;mpsusername&quot;: &quot;standalone&quot;,
-                &quot;mpspass&quot;: &quot;G@ppm0ym&quot;,
-                &quot;useglobalmpscredentials&quot;: true,
-                &quot;country&quot;: &quot;US&quot;,
-                &quot;company&quot;: &quot;NoCorp&quot;,
-                &quot;debug&quot;: true,
-                &quot;listenany&quot;: true,
-                &quot;https&quot;: true,
-                &quot;mpstlsoffload&quot;: false,
-                &quot;webport&quot; : 3000,
-                &quot;generateCertificates&quot;: true,
-                &quot;loggeroff&quot;: true
-        }
-</code></pre></div>
-
-<h3 id="3-addmodify-credentialsjson">3. Add/modify credentials.json<a class="headerlink" href="#3-addmodify-credentialsjson" title="Permanent link">&para;</a></h3>
-<p>If not in the ~/MPS/private directory, navigate to the private directory within the MPS directory.</p>
-<div class="codehilite"><pre><span></span><code>cp credentials.json.sample credentials.json
-</code></pre></div>
-
-<p><strong>AMT GUID</strong></p>
-<p>Each AMT device has a unique identifier (GUID) assigned to it by default. This GUID will be used as the reference to each device record. </p>
-<p>To obtain the GUID on the AMT device, open a command prompt, navigate to where meshcmd.exe resides, and run <code>meshcmd amtuuid</code>. The GUID will display.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><strong>name</strong></td>
-<td align="left">AMT hostname or user friendly identifier</td>
-</tr>
-<tr>
-<td align="left"><strong>mpsuser</strong></td>
-<td align="left">AMT Device uses this as the user name while connecting to MPS. This is set once by the developer</td>
-</tr>
-<tr>
-<td align="left"><strong>mpspass</strong></td>
-<td align="left">AMT Device uses this as the password while connecting to MPS. This is set once by the developer</td>
-</tr>
-<tr>
-<td align="left"><strong>amtuser</strong></td>
-<td align="left">MPS uses this as the AMT user name when making AMT API calls (WSMAN or Redirection). This is the username set in the AMT configuration</td>
-</tr>
-<tr>
-<td align="left"><strong>amtpass</strong></td>
-<td align="left">MPS uses this as the AMT password when making AMT API calls (WSMAN or Redirection). This is the password set during AMT configuration</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition info">
-<p class="admonition-title">AMT and MPS password security recommendation</p>
-</div>
-<p>Intel highly recommends that you don't use same password for MPS AMT. An example strong password would contain:</p>
-<ul>
-<li>at least eight characters</li>
-<li>at least one uppercase letter</li>
-<li>one lowercase letter</li>
-<li>one digit</li>
-<li>one special character</li>
-</ul>
-<p>For example:</p>
-<div class="codehilite"><pre><span></span><code>        <span class="p p-Indicator">{</span>
-        <span class="s">&quot;8dad96cb-c3db-11e6-9c43-bc0000d20000&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
-            <span class="s">&quot;name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Win7-machine&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;mpsuser&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;standalone&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;mpspass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;G@ppm0ym&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;amtuser&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;amtpass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;G@ppm0ym&quot;</span>
-        <span class="p p-Indicator">},</span>
-        <span class="s">&quot;bf49cf00-9164-11e4-952b-b8aeed7ec594&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
-            <span class="s">&quot;name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Ubuntu-machine&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;mpsuser&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;xenial&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;mpspass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;G@ppm0ym&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;amtuser&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;amtpass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;G@ppm0ym&quot;</span>
-        <span class="p p-Indicator">}</span>
-    <span class="p p-Indicator">}</span>
-</code></pre></div>
-
-<h3 id="4-addmodify-guidsjson">4. Add/modify guids.json<a class="headerlink" href="#4-addmodify-guidsjson" title="Permanent link">&para;</a></h3>
-<p>If <em>usewhitelist</em> is set to <em>true</em> in the config.json file, add a guids.json file in <em>private</em> directory to whitelist AMT GUIDs that are allowed to connect to MPS. </p>
-<p>Use <strong>guids.json.sample</strong> as an reference to create the guids.json and populate it with guids for whitelisting. This file is used to simulate whitelisting based on AMT GUIDs.</p>
-<p>Navigate to the ~/MPS/private directory.</p>
-<div class="codehilite"><pre><span></span><code>cd ~/MPS/private
-</code></pre></div>
-
-<p>Create the guids.json file.</p>
-<div class="codehilite"><pre><span></span><code>cp credentials.json.sample credentials.json
-</code></pre></div>
-
-<p>Edit this file to include your GUID(s). The GUID can be found using meshcommander. On the device with AMT activated, change to the directory where meshcmd.exe was downloaded. For example </p>
-<p>For example:</p>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">[</span><span class="s">&quot;8dad96cb-c3db-11e6-9c43-bc0000d20000&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;12345678-9abc-def1-2345-123456789000&quot;</span><span class="p p-Indicator">]</span>
-</code></pre></div>
-
-<h3 id="5-start-the-server">5. Start the server<a class="headerlink" href="#5-start-the-server" title="Permanent link">&para;</a></h3>
-<p>Navigate to the MPS directory. Run the following commands:</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">npm</span> <span class="nx">install</span>
-<span class="nx">npm</span> <span class="nx">start</span>
-</code></pre></div>
-
-<p>This will install all the dependencies and start the server. Webserver (or HTTPS server) runs on port 3000 by default and MPS Server listens on port 4433.
-Certificates are generated and stored in private folder.</p>
-<p><a href="assets/images/MPS_npminstall.PNG"><img alt="mps" src="assets/images/MPS_npminstall.PNG" /></a></p>
-<h3 id="6-connect-an-amt-device">6. Connect an AMT device<a class="headerlink" href="#6-connect-an-amt-device" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Make sure the AMT device is connected to the internet.</p>
-</li>
-<li>
-<p>On the device, browse to the MPS server using the IP address or domain </p>
-</li>
-</ul>
-<p><strong>Example URL</strong>: https://MPS-IPaddress:3000</p>
-<ul>
-<li>Click <strong>Download MESCRIPT</strong>. </li>
-<li>This will download a <strong>cira_setup.mescript</strong> file.</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">MEScript<p>MEScript files are used by MeshCMD to execute a series of actions on the AMT device.</p>
-</p>
-</div>
-<p><a href="assets/images/MPS_DownloadMEScript.PNG"><img alt="mps" src="assets/images/MPS_DownloadMEScript.PNG" /></a></p>
-<ul>
-<li>Next, locate the meshcommander.exe download previously.</li>
-</ul>
-<p><a href="assets/images/MPS_MeshCommander.PNG"><img alt="mps" src="assets/images/MPS_MeshCommander.PNG" /></a></p>
-<ul>
-<li>Browse to the folder where MEScript and MeshCMD are downloaded. Open an elevated or administrator command prompt or cli. Run the below command. This runs a script that does all the configuration required for CIRA setup.<ol>
-<li>Specifies the <strong>root certificate</strong> that the Firmware (ME) should use for TLS negotiation.</li>
-<li>Specifies the <strong>login credentials</strong> that the Firmware should use when connecting to MPS.</li>
-<li>Specifies the <strong>periodic connection</strong> time the Firmware should use to maintain MPS connection.</li>
-<li>Specifies the <strong>home domain suffix</strong> used to enable environment detection (When device is outside the home domain, AMT uses CIRA to connect to MPS).</li>
+<p>Additional sections provide guidance on the reference implementation UI Toolkit, REST API usage, asset security, and more.</p>
+<p><img alt="assets/images/ActivEdgeComponentsLarge.png" src="assets/images/AEHighLevelArch.png" /></p>
+<p><strong>Figure 1: Active Edge High-level Architecture</strong></p>
+<p>As shown in Figure 1, Active Edge high-level architecture consists of four components:</p>
+<ol>
+<li><strong>MPS</strong> - A microservice that utilizes an Intel vPro&reg; feature, Client Initiated Remote Access (CIRA), for enabling edge, cloud devices to maintain a persistent connection for out-of-band manageability features, such as power control or KVM control.</li>
+<li><strong>RPS</strong> - A microservice that activates Intel&reg; AMT-based platforms using pre-defined profiles and connects them to the MPS for manageability use cases.</li>
+<li><strong>RPC</strong> - A lightweight client application that communicates with the RPS server to activate Intel&reg; AMT.</li>
+<li><strong>UI Toolkit</strong> - A Toolkit that includes prebuilt React components and a reference implementation web console. The React-based snippets simplify the task of adding complex manageability-related UI controls, such as the Keyboard, Video, Mouse (KVM), to a console.</li>
 </ol>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><code>    <span class="l l-Scalar l-Scalar-Plain">meshcmd.exe amtscript --script cira_setup.mescript --pass &lt;amt password&gt;</span>
-</code></pre></div>
-
+<h2 id="active-edge-setup">Active Edge Setup<a class="headerlink" href="#active-edge-setup" title="Permanent link">&para;</a></h2>
+<h3 id="build-and-deploy-microservices-locally">Build and Deploy Microservices Locally<a class="headerlink" href="#build-and-deploy-microservices-locally" title="Permanent link">&para;</a></h3>
+<p>If unfamiliar with Docker, choose this setup option to accomplish a manual, local installation of microservices. </p>
+<p><a class="md-button md-button--primary" href="Local/overview/">Get Started with Local Microservices</a></p>
+<p>Estimated completion time: <strong>Approximately 15 minutes</strong></p>
+<h3 id="build-and-deploy-microservices-with-local-docker-images">Build and Deploy Microservices with Local Docker* Images<a class="headerlink" href="#build-and-deploy-microservices-with-local-docker-images" title="Permanent link">&para;</a></h3>
+<p>If familiar with Docker, choose this setup option to install microservices as local Docker images. This option is an especially good choice for development systems with Docker already installed.</p>
+<p><a class="md-button md-button--primary" href="Docker/overview/">Get Started with Microservices as Docker Images</a></p>
+<p>Estimated completion time: <strong>Approximately 15 minutes</strong></p>
+<p>Both build-and-deploy options install microservices locally on a development system. The client application is installed on a managed device. Experienced Docker users may choose to deploy microservices straight to the <a href="Docker/dockerCloud/">cloud</a>.</p>
+<hr />
+<h2 id="additional-intel-amt-resources">Additional Intel® AMT Resources<a class="headerlink" href="#additional-intel-amt-resources" title="Permanent link">&para;</a></h2>
+<p>For additional information about Intel® AMT, see the following links:</p>
 <ul>
-<li>The device will now connect to the MPS Server.</li>
+<li><a href="https://software.intel.com/content/www/us/en/develop/topics/iot/hardware/vpro-platform-retail.html">Intel® vPro Overview</a></li>
+<li><a href="https://www.intel.com/content/www/us/en/support/articles/000026592/technologies.html">Video Link</a></li>
+<li><a href="https://software.intel.com/en-us/articles/getting-started-with-intel-active-management-technology-amt">Detailed Setup document</a></li>
 </ul>
-<p><a href="assets/images/MPS_DeviceOnline.PNG"><img alt="mps" src="assets/images/MPS_DeviceOnline.PNG" /></a></p>
-<div class="admonition info">
-<p class="admonition-title">Device credentials</p>
-<p>Make sure that AMT guid entry is present in credential.json file. Also include the AMT guid in guids.json file if <em>usewhitelist</em> is set to <em>true</em> in config.json file.</p>
-</div>
                 
               
               
@@ -1131,28 +1136,14 @@ Certificates are generated and stored in private folder.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="activateAMT/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Activate AMT
-              </div>
-            </div>
-          </a>
         
-        
-          <a href="api/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="Local/overview/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                API
+                Overview
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1168,7 +1159,7 @@ Certificates are generated and stored in private folder.</p>
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; Intel Corporation 2019
+            Copyright &copy; 2020 Intel Corporation
           </div>
         
         Made with
@@ -1189,7 +1180,7 @@ Certificates are generated and stored in private folder.</p>
       <script>
         app = initialize({
           base: ".",
-          features: [],
+          features: ['navigation.tabs'],
           search: Object.assign({
             worker: "assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)

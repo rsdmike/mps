@@ -1,67 +1,42 @@
 
-
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
     
     
       
-        <title>Install MPS Locally - ActivEdge: Smart Building Blocks for Remote Edge Management</title>
+        <title>Install MPS Locally - Active Edge: Remote Edge Management Toolkit</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
-      
+      <link rel="stylesheet" href="../../assets/stylesheets/main.358818c7.min.css">
       
         
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f0267088.min.css">
         
-        <meta name="theme-color" content="#03a9f4">
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
-    
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/branding.css">
     
     
       
@@ -69,71 +44,79 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#clone-the-repository" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="ActivEdge: Smart Building Blocks for Remote Edge Management" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              ActivEdge: Smart Building Blocks for Remote Edge Management
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Install MPS Locally
-              
-            </span>
-          
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+        <a href="#clone-the-repository" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Active Edge: Remote Edge Management Toolkit" class="md-header-nav__button md-logo" aria-label="Active Edge: Remote Edge Management Toolkit">
+      
+  <img src="../../assets/images/logo-white-75px.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Active Edge: Remote Edge Management Toolkit
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Install MPS Locally
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -141,34 +124,173 @@
     </div>
   </div>
 </div>
+    
+    
+      <div class="md-header-nav__source">
         
+<a href="https://github.com/open-amt-cloud-toolkit/mps/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    open-amt-cloud-toolkit/mps
+  </div>
+</a>
       </div>
-      
-    </div>
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+          Getting Started
+        </a>
+      
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../General/manageDevice/" class="md-tabs__link">
+          Microservices
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Docker/dockerCloud/" class="md-tabs__link">
+          Tutorials
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../APIs/indexMPS/" class="md-tabs__link">
+          APIs
+        </a>
+      
+    </li>
+  
+
       
         
       
+        
+  
+  
+    <li class="md-tabs__item">
       
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        <a href="../../Topics/misc/" class="md-tabs__link">
+          Active Edge Topics
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="ActivEdge: Smart Building Blocks for Remote Edge Management" class="md-nav__button md-logo">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Active Edge: Remote Edge Management Toolkit" class="md-nav__button md-logo" aria-label="Active Edge: Remote Edge Management Toolkit">
       
-        <i class="md-icon"></i>
-      
+  <img src="../../assets/images/logo-white-75px.png" alt="logo">
+
     </a>
-    ActivEdge: Smart Building Blocks for Remote Edge Management
+    Active Edge: Remote Edge Management Toolkit
   </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/open-amt-cloud-toolkit/mps/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    open-amt-cloud-toolkit/mps
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -178,7 +300,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Home
     </a>
   </li>
@@ -193,14 +315,62 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
-      MPS & RPS Local Setup
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        MPS & RPS Local Setup
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Installation MPS & RPS
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Installation MPS & RPS" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        Installation MPS & RPS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-1" type="checkbox" id="nav-2-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1-1">
+      Local Setup
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Local Setup" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        Local Setup
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -211,7 +381,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../overview/" title="Overview" class="md-nav__link">
+    <a href="../overview/" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -226,63 +396,56 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Install MPS Locally
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Install MPS Locally" class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Install MPS Locally
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#clone-the-repository" title="Clone the Repository" class="md-nav__link">
+  <a href="#clone-the-repository" class="md-nav__link">
     Clone the Repository
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modify-mps-configuration-file" title="Modify MPS Configuration File" class="md-nav__link">
+  <a href="#modify-mps-configuration-file" class="md-nav__link">
     Modify MPS Configuration File
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-the-webui" title="Configure the WebUI" class="md-nav__link">
+  <a href="#configure-the-webui" class="md-nav__link">
     Configure the WebUI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-the-mps-server" title="Start the MPS Server" class="md-nav__link">
+  <a href="#start-the-mps-server" class="md-nav__link">
     Start the MPS Server
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#next-up" title="Next up" class="md-nav__link">
-    Next up
-  </a>
-  
-</li>
-      
-      
-      
-      
       
     </ul>
   
@@ -297,7 +460,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../installRPS/" title="Install RPS Locally" class="md-nav__link">
+    <a href="../installRPS/" class="md-nav__link">
       Install RPS Locally
     </a>
   </li>
@@ -307,22 +470,24 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-2" type="checkbox" id="nav-2-1-2">
     
-    <label class="md-nav__link" for="nav-3">
-      MPS & RPS Docker* Images
+    <label class="md-nav__link" for="nav-2-1-2">
+      Docker* Images
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        MPS & RPS Docker* Images
+    <nav class="md-nav" aria-label="Docker* Images" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        Docker* Images
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -333,7 +498,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Docker/overview/" title="Overview" class="md-nav__link">
+    <a href="../../Docker/overview/" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -345,9 +510,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Docker/dockerLocal/" title="Build Docker* Images" class="md-nav__link">
+    <a href="../../Docker/dockerLocal/" class="md-nav__link">
       Build Docker* Images
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -363,14 +538,37 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-4">
-      RPS Configuration
+    <label class="md-nav__link" for="nav-3">
+      Microservices
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        RPS Configuration
+    <nav class="md-nav" aria-label="Microservices" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Microservices
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Managed Presence Server
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Managed Presence Server" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        Managed Presence Server
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -381,7 +579,45 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/loginToRPS/" title="Login to RPS" class="md-nav__link">
+    <a href="../../General/manageDevice/" class="md-nav__link">
+      MPS Device Management
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Remote Provisioning Server
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Remote Provisioning Server" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        Remote Provisioning Server
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../General/loginToRPS/" class="md-nav__link">
       Login to RPS
     </a>
   </li>
@@ -393,7 +629,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/createCIRAConfig/" title="Create a CIRA Config" class="md-nav__link">
+    <a href="../../General/createCIRAConfig/" class="md-nav__link">
       Create a CIRA Config
     </a>
   </li>
@@ -405,7 +641,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/createProfileCCM/" title="Create a Profile with CCM" class="md-nav__link">
+    <a href="../../General/createProfileCCM/" class="md-nav__link">
       Create a Profile with CCM
     </a>
   </li>
@@ -417,7 +653,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/createProfileACM/" title="Create a Profile with ACM" class="md-nav__link">
+    <a href="../../General/createProfileACM/" class="md-nav__link">
       Create a Profile with ACM
     </a>
   </li>
@@ -427,22 +663,24 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
-    <label class="md-nav__link" for="nav-5">
-      RPC on a Managed Device
+    <label class="md-nav__link" for="nav-3-3">
+      Remote Provisioning Client
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        RPC on a Managed Device
+    <nav class="md-nav" aria-label="Remote Provisioning Client" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon"></span>
+        Remote Provisioning Client
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -453,9 +691,26 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/buildRPC/" title="Build & Run RPC" class="md-nav__link">
-      Build & Run RPC
+    <a href="../../General/buildRPC_GithubActions/" class="md-nav__link">
+      Build & Run RPC (GitHub Actions)
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../General/buildRPC/" class="md-nav__link">
+      Build & Run RPC (manual)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -471,49 +726,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-6">
-      MPS Device Management
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        MPS Device Management
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../General/manageDevice/" title="See Connected Devices" class="md-nav__link">
-      See Connected Devices
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-4">
       Tutorials
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
         Tutorials
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -525,7 +746,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Docker/dockerCloud/" title="Docker Images on the Cloud" class="md-nav__link">
+    <a href="../../Docker/dockerCloud/" class="md-nav__link">
       Docker Images on the Cloud
     </a>
   </li>
@@ -537,7 +758,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/uitoolkit/" title="Create Consoles with the UI Toolkit" class="md-nav__link">
+    <a href="../../Tutorials/uitoolkit/" class="md-nav__link">
       Create Consoles with the UI Toolkit
     </a>
   </li>
@@ -549,8 +770,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/apiTutorial/" title="Construct a Rest API Call" class="md-nav__link">
-      Construct a Rest API Call
+    <a href="../../Tutorials/apiTutorial/" class="md-nav__link">
+      Construct a REST API Call
     </a>
   </li>
 
@@ -561,7 +782,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/addDatabase/" title="Add a Database" class="md-nav__link">
+    <a href="../../Tutorials/addDatabase/" class="md-nav__link">
       Add a Database
     </a>
   </li>
@@ -573,7 +794,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/addVault/" title="Add Vault Storage" class="md-nav__link">
+    <a href="../../Tutorials/addVault/" class="md-nav__link">
       Add Vault Storage
     </a>
   </li>
@@ -585,7 +806,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/allowlist/" title="Use an Allowlist" class="md-nav__link">
+    <a href="../../Tutorials/allowlist/" class="md-nav__link">
       Use an Allowlist
     </a>
   </li>
@@ -603,13 +824,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-5">
       APIs
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+    <nav class="md-nav" aria-label="APIs" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
         APIs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -621,7 +844,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../APIs/indexMPS/" title="MPS Methods" class="md-nav__link">
+    <a href="../../APIs/indexMPS/" class="md-nav__link">
       MPS Methods
     </a>
   </li>
@@ -633,7 +856,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../APIs/indexRPS/" title="RPS Methods" class="md-nav__link">
+    <a href="../../APIs/indexRPS/" class="md-nav__link">
       RPS Methods
     </a>
   </li>
@@ -650,7 +873,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../security/" title="Security" class="md-nav__link">
+    <a href="../../security/" class="md-nav__link">
       Security
     </a>
   </li>
@@ -663,14 +886,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-10">
-      ActivEdge Topics
+    <label class="md-nav__link" for="nav-7">
+      Active Edge Topics
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        ActivEdge Topics
+    <nav class="md-nav" aria-label="Active Edge Topics" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Active Edge Topics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -681,7 +906,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Topics/misc/" title="Static and Dynamic IPs" class="md-nav__link">
+    <a href="../../Topics/misc/" class="md-nav__link">
       Static and Dynamic IPs
     </a>
   </li>
@@ -693,7 +918,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Topics/guids/" title="GUIDs in Intel AMT" class="md-nav__link">
+    <a href="../../Topics/guids/" class="md-nav__link">
       GUIDs in Intel AMT
     </a>
   </li>
@@ -705,7 +930,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Topics/mebx/" title="Manually Configure and Unprovision" class="md-nav__link">
+    <a href="../../Topics/mebx/" class="md-nav__link">
       Manually Configure and Unprovision
     </a>
   </li>
@@ -717,7 +942,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Topics/proxies/" title="Proxies" class="md-nav__link">
+    <a href="../../Topics/proxies/" class="md-nav__link">
       Proxies
     </a>
   </li>
@@ -734,7 +959,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
+    <a href="../../release-notes/" class="md-nav__link">
       Release notes
     </a>
   </li>
@@ -746,8 +971,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
+    <a href="../../license/" class="md-nav__link">
       License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/" class="md-nav__link">
+      Troubleshooting
     </a>
   </li>
 
@@ -763,51 +1000,43 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#clone-the-repository" title="Clone the Repository" class="md-nav__link">
+  <a href="#clone-the-repository" class="md-nav__link">
     Clone the Repository
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modify-mps-configuration-file" title="Modify MPS Configuration File" class="md-nav__link">
+  <a href="#modify-mps-configuration-file" class="md-nav__link">
     Modify MPS Configuration File
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-the-webui" title="Configure the WebUI" class="md-nav__link">
+  <a href="#configure-the-webui" class="md-nav__link">
     Configure the WebUI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-the-mps-server" title="Start the MPS Server" class="md-nav__link">
+  <a href="#start-the-mps-server" class="md-nav__link">
     Start the MPS Server
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#next-up" title="Next up" class="md-nav__link">
-    Next up
-  </a>
-  
-</li>
-      
-      
-      
-      
       
     </ul>
   
@@ -821,23 +1050,39 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/open-amt-cloud-toolkit/mps/edit/master/docs/Local/installMPS.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
                 
                   <h1>Install MPS Locally</h1>
                 
-                <p>The Management Presence Server is a cloud-agnostic microservice that enables platforms featuring Intel&reg; AMT to be managed over the internet. This section details how to set up the MPS on a development device.</p>
-<p>The image below illustrates how the Intel&reg; AMT device connects to MPS for remote management.</p>
-<p><a href="../../assets/images/MPS_Overview.png"><img alt="MPS" src="../../assets/images/MPS_Overview.png" /></a></p>
-<h3 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h3>
-<p>1. Open a Command Prompt or Terminal and navigate to a directory of your choice for development.</p>
-<p>2. Clone the MPS repository and navigate to it with the following commands:</p>
-<div class="codehilite"><pre><span></span><code>git clone --branch ActivEdge https://github.com/open-amt-cloud-toolkit/mps.git
-cd mps
+                <p>The Management Presence Server (MPS) is a cloud-agnostic microservice that enables platforms featuring Intel&reg; AMT to be managed over the internet. This section details how to set up the MPS on a development system.</p>
+<p>Figure 1 illustrates where MPS fits into the overall microservice architecture.</p>
+<p><a href="../../assets/images/MPSDeployment.png"><img alt="MPS" src="../../assets/images/MPSDeployment.png" /></a></p>
+<p><strong>Figure 1: Deploy Management Presence Server (MPS) on a development system.</strong></p>
+<h2 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h2>
+<p><strong>To clone a repository:</strong></p>
+<ol>
+<li>
+<p>Open a Command Prompt or Terminal and navigate to a directory of your choice for development. </p>
+</li>
+<li>
+<p>Clone the MPS repository and navigate to it with the following commands:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git clone --branch ActivEdge https://github.com/open-amt-cloud-toolkit/mps.git <span class="o">&amp;&amp;</span> <span class="nb">cd</span> mps
 </code></pre></div>
-
-
-<h3 id="modify-mps-configuration-file">Modify MPS Configuration File<a class="headerlink" href="#modify-mps-configuration-file" title="Permanent link">&para;</a></h3>
-<p>1. Open the <code>.mpsrc</code> file, within the mps directory, using a text editor of your choice to configure settings, such as Notepad on Windows or Text Edtior on Linux.</p>
-<p>2. Configure the following settings:</p>
+<h2 id="modify-mps-configuration-file">Modify MPS Configuration File<a class="headerlink" href="#modify-mps-configuration-file" title="Permanent link">&para;</a></h2>
+<p><strong>To modify the MPS configuration file:</strong></p>
+<ol>
+<li>
+<p>Open the <code>.mpsrc</code> file, within the <code>mps</code> directory, using a text editor of your choice to configure settings, such as Notepad on Windows<em> or Text Editor on Linux</em>.</p>
+</li>
+<li>
+<p>Configure the following settings:</p>
+</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -848,21 +1093,24 @@ cd mps
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>use_allowlist</strong></td>
+<td align="left"><code>use_allowlist</code></td>
 <td align="left">false</td>
 <td align="left">A value of false disables the allowlist functionaliy. For information about allowlist, see the allowlist <a href="../../Tutorials/allowlist/">tutorial</a></td>
 </tr>
 <tr>
-<td align="left"><strong>common_name</strong></td>
-<td align="left">Development device's IP address. <br> <strong>Note:</strong> For this guide, you <strong>cannot</strong> use localhost because the managed device would be unable to reach the MPS and RPS servers.</td>
+<td align="left"><code>common_name</code></td>
+<td align="left">Development system's IP address. <br> <strong>Note:</strong> For this guide, you <strong>cannot</strong> use localhost because the managed device would be unable to reach the MPS and RPS servers.</td>
 <td align="left">For this guide, the address will be used in a self-signed certificate. It may be an IP address or FQDN in real world deployment.</td>
 </tr>
 </tbody>
 </table>
-<p>3. Save and close the file.</p>
-<p><br></p>
+<ol>
+<li>Save and close the file.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <p>Example .mpsrc file:</p>
-<div class="codehilite"><pre><span></span><code>  <span class="p">{</span>
+<div class="highlight"><pre><span></span><code>  <span class="p">{</span>
 <span class="hll">      <span class="nt">&quot;use_allowlist&quot;</span> <span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
 </span><span class="hll">      <span class="nt">&quot;common_name&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.0.8&quot;</span><span class="p">,</span>
 </span>      <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">4433</span><span class="p">,</span>
@@ -905,20 +1153,25 @@ cd mps
       <span class="p">}</span>
   <span class="p">}</span>
 </code></pre></div>
-
-
-<h3 id="configure-the-webui">Configure the WebUI<a class="headerlink" href="#configure-the-webui" title="Permanent link">&para;</a></h3>
-<p>1. Navigate to the <code>src</code> directory in .\mps\webui\src\</p>
-<div class="codehilite"><pre><span></span><code>cd webui/src
+</div>
+<h2 id="configure-the-webui">Configure the WebUI<a class="headerlink" href="#configure-the-webui" title="Permanent link">&para;</a></h2>
+<p><strong>To configure the WebUI:</strong></p>
+<ol>
+<li>
+<p>Navigate to the <code>src</code> directory in <code>.\mps\webui\src\</code></p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> webui/src
 </code></pre></div>
-
-
-<p>2. Open the app.config.js file using a text editor to configure IP Address settings.</p>
-<p>3. Replace the localhost for both <em>rpsServerIP</em> and <em>serverIP</em> with your development device's IP Address. Save and close the file.</p>
-<p>Example:</p>
-<div class="codehilite"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">validExtensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;.svg&#39;</span><span class="p">];</span>
-  <span class="kr">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_MPS_WEB_PORT</span><span class="o">?</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_MPS_WEB_PORT</span> <span class="o">:</span> <span class="mi">3000</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">rpsPort</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_RPS_WEB_PORT</span> <span class="o">?</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_RPS_WEB_PORT</span> <span class="o">:</span> <span class="mi">8081</span><span class="p">;</span>
+</li>
+<li>
+<p>Open the <code>app.config.js</code> file using a text editor to configure IP Address settings.</p>
+</li>
+<li>
+<p>Replace the localhost for both <code>rpsServerIP</code> and <code>serverIP</code> with your development system's IP Address. Save and close the file.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">validExtensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;.svg&#39;</span><span class="p">];</span>
+  <span class="kr">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_MPS_WEB_PORT</span><span class="o">?</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_MPS_WEB_PORT</span> <span class="o">:</span> <span class="mf">3000</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">rpsPort</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_RPS_WEB_PORT</span> <span class="o">?</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_RPS_WEB_PORT</span> <span class="o">:</span> <span class="mf">8081</span><span class="p">;</span>
 <span class="hll">  <span class="kr">const</span> <span class="nx">rpsServerIP</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_RPS_SERVER</span> <span class="o">?</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_RPS_SERVER</span> <span class="o">:</span> <span class="s1">&#39;192.168.0.8&#39;</span><span class="p">;</span>
 </span><span class="hll">  <span class="kr">const</span> <span class="nx">serverIP</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_MPS_SERVER</span> <span class="o">?</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_MPS_SERVER</span> <span class="o">:</span> <span class="s1">&#39;192.168.0.8&#39;</span><span class="p">;</span>
 </span>  <span class="kr">const</span> <span class="nx">mpsAPIKey</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_MPSXAPIKEY</span> <span class="o">?</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_MPSXAPIKEY</span> <span class="o">:</span> <span class="s1">&#39;APIKEYFORMPS123!&#39;</span><span class="p">;</span>
@@ -927,33 +1180,33 @@ cd mps
     <span class="p">...</span>
 <span class="p">};</span>
 </code></pre></div>
-
-
-<p><br></p>
-<p>4. Navigate back to the <code>./mps</code> root directory.</p>
-<p>5. Run the install commands to install all required dependencies.</p>
-<div class="codehilite"><pre><span></span><code>npm install
-</code></pre></div>
-
-
-<h3 id="start-the-mps-server">Start the MPS Server<a class="headerlink" href="#start-the-mps-server" title="Permanent link">&para;</a></h3>
-<p>Start the MPS server. The web server runs on port 3000 by default, and the MPS Server listens on port 4433. It will take approximately 2–3 minutes to start.</p>
-<div class="codehilite"><pre><span></span><code>npm run dev
-</code></pre></div>
-
-
-<blockquote>
-<p><strong>Note:</strong> The development device's IP Address will be used to connect to the web server.</p>
-</blockquote>
+</div>
+</li>
+<li>
+<p>Navigate back to the <code>./mps</code> root directory.</p>
+</li>
+<li>Run the install commands to install all required dependencies.
+    <div class="highlight"><pre><span></span><code>npm install
+</code></pre></div></li>
+</ol>
+<h2 id="start-the-mps-server">Start the MPS Server<a class="headerlink" href="#start-the-mps-server" title="Permanent link">&para;</a></h2>
+<p><strong>To start the MPS server:</strong></p>
+<ol>
+<li>Run the the following command:
+<div class="highlight"><pre><span></span><code>npm run dev
+</code></pre></div></li>
+<li>Figure 2 demonstrates successful deployment. The web server runs on port 3000 by default, and the MPS Server listens on port 4433. It will take approximately 2–3 minutes to start.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The development system's IP Address will be used to connect to the web server.</p>
+</div>
 <p><a href="../../assets/images/MPS_npmrundev.png"><img alt="mps" src="../../assets/images/MPS_npmrundev.png" /></a></p>
-<blockquote>
-<p><strong>Note:</strong> Because the <em>generateCertificates</em> field is set to true in the .mpsrc file, certificates will be generated and stored in the ../mps/private directory.</p>
-</blockquote>
-<p><br></p>
-<h2 id="next-up">Next up<a class="headerlink" href="#next-up" title="Permanent link">&para;</a></h2>
-<p><a href="../installRPS/">Install RPS Locally</a></p>
-                
-                  
+<p><strong>Figure 2: MPS reports successful deployment.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because the <code>generateCertificates</code> field is set to true in the <code>.mpsrc</code> file, certificates will be generated and stored in the <code>../mps/private</code> directory.</p>
+</div>
                 
               
               
@@ -970,34 +1223,34 @@ cd mps
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../overview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../overview/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Overview
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../installRPS/" title="Install RPS Locally" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../installRPS/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Install RPS Locally
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -1008,11 +1261,14 @@ cd mps
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Intel Corporation
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -1021,9 +1277,18 @@ cd mps
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>

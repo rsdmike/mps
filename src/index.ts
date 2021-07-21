@@ -11,15 +11,17 @@ import { configType, certificatesType } from './models/Config'
 
 import { certificates } from './utils/certificates'
 import { tlsConfig } from './utils/tlsConfiguration'
-import { IDbProvider } from './models/IDbProvider'
+import { IDbProvider } from './interfaces/IDbProvider'
 
 import { SecretManagerService } from './utils/SecretManagerService'
-import { SecretsDbProvider } from './utils/vaultDbProvider'
 import { parseValue } from './utils/parseEnvValue'
 
 import rc from 'rc'
 import { Environment } from './utils/Environment'
 import { DeviceDb } from './db/device'
+import { MqttProvider } from './utils/mqttProvider'
+import { DbProvider } from './utils/DbProvider'
+import { ISecretManagerService } from './interfaces/ISecretManagerService'
 try {
   // To merge ENV variables. consider after lowercasing ENV since our config keys are lowercase
   process.env = Object.keys(process.env)
@@ -31,8 +33,8 @@ try {
   // build config object
   const config: configType = rc('mps')
 
-  if (!config.web_admin_password || !config.web_admin_user) {
-    log.error('Web admin username, password and API key are mandatory. Make sure to set values for these variables.')
+  if (!config.web_admin_password || !config.web_admin_user || !config.jwt_secret) {
+    log.error('Web admin username, password and jwt secret are mandatory. Make sure to set values for these variables.')
     process.exit(1)
   }
 
@@ -44,17 +46,22 @@ try {
   log.silly(`Updated config... ${JSON.stringify(config, null, 2)}`)
   Environment.Config = config
 
-  // DB initialization
+  // MQTT Connection
+  const mqtt: MqttProvider = new MqttProvider(config)
+  mqtt.connectBroker()
 
-  const db: IDbProvider = new SecretsDbProvider(new SecretManagerService(config, log), log, config)
+  // DB initialization
   const deviceDb = new DeviceDb()
+  const db: IDbProvider = new DbProvider(deviceDb)
+  const secrets: ISecretManagerService = new SecretManagerService(config, log)
 
   // Cleans the DB before exit when it listens to the signals
   const signals = ['SIGINT', 'exit', 'uncaughtException', 'SIGTERM', 'SIGHUP']
   signals.forEach((signal) => {
     process.on(signal, () => {
-      console.log('signal received :', signal)
+      log.debug('signal received :', signal)
       deviceDb.clearInstanceStatus(Environment.Config.instance_name)
+      mqtt.endBroker()
       if (signal !== 'exit') {
         setTimeout(() => process.exit(), 1000)
       }
@@ -87,7 +94,7 @@ try {
         log.debug('using cert from file')
         certs = { mps_tls_config: tlsConfig.mps(), web_tls_config: tlsConfig.web() }
       }
-      log.info('Loaded existing certificates')
+      log.debug('Loaded existing certificates')
     } else {
       if (!fs.existsSync(certPath)) {
         fs.mkdirSync(certPath, { recursive: true })
@@ -95,9 +102,9 @@ try {
       certs = certificates.generateCertificates(config, certPath)
     }
 
-    log.info('certs loaded..')
+    log.debug('certs loaded..')
 
-    const mps = new MPSMicroservice(config, db, certs)
+    const mps = new MPSMicroservice(config, db, secrets, certs, mqtt)
     mps.start()
   }
 } catch (error) {

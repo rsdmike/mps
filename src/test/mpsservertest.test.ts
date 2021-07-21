@@ -8,31 +8,29 @@ import * as net from 'net'
 import * as fs from 'fs'
 import * as https from 'https'
 import * as forge from 'node-forge'
-import { certificates } from '../src/utils/certificates'
-import { certificatesType, configType } from '../src/models/Config'
-import { Database } from '../src/utils/db'
-import { MPSMicroservice } from '../src/mpsMicroservice'
-import { MPSServer } from '../src/server/mpsserver'
+import { certificates } from '../utils/certificates'
+import { certificatesType, configType } from '../models/Config'
+import { MPSMicroservice } from '../mpsMicroservice'
+import { MPSServer } from '../server/mpsserver'
 import { join } from 'path'
+import { ISecretManagerService } from '../interfaces/ISecretManagerService'
+import { DbProvider } from '../utils/DbProvider'
+import { IDeviceDb } from '../interfaces/IDeviceDb'
+import { Device } from '../models/models'
+import { Environment } from '../utils/Environment'
+
 
 // Parsing configuration
 const config: configType = {
-  use_allowlist: false,
   common_name: 'localhost',
   port: 4433,
-  username: 'standalone',
-  pass: 'G@ppm0ym',
-  use_global_mps_credentials: true,
   country: 'US',
   company: 'NoCorp',
-  debug: true,
   listen_any: true,
   https: true,
   tls_offload: false,
   web_port: 3000,
   generate_certificates: true,
-  debug_level: 5,
-  logger_off: false,
   cert_format: 'file',
   cert_path: join(__dirname, 'private'),
   data_path: join(__dirname, 'private', 'data.json'),
@@ -72,7 +70,9 @@ const config: configType = {
 const pki = forge.pki
 let certs : certificatesType
 const certPath = config.cert_path
-let db: Database
+let db: DbProvider
+let devicesMock: IDeviceDb
+let secrets: ISecretManagerService
 let mpsService: MPSMicroservice
 let mps: MPSServer
 
@@ -86,8 +86,23 @@ describe('MPS Server', function () {
       console.log(`Failed to create Cert path ${certPath}. Create if it doesn't exist`)
     }
     certs = await certificates.generateCertificates(config, certPath)
-    db = new Database(config)
-    mpsService = new MPSMicroservice(config, db, certs)
+    let device = {mpsusername:'admin'}
+    devicesMock = {
+       get: async ()=>{ return [] as Device[] },
+       getDistinctTags:async ()=>{return ['tag']},
+       getById:async (guid)=>{return device as Device},
+       getByTags:async (tags)=>{return [device] as Device[]},
+       delete:async (guid)=>{return true},
+       insert:async (device)=>{return {} as Device},
+       update:async ()=>{return {} as Device},
+    }
+    db  = new DbProvider(devicesMock)
+    secrets = {
+      getSecretFromKey: async (path: string, key: string) => {return "P@ssw0rd" },
+      getSecretAtPath: async (path: string) => {return {} as any },
+      getAMTCredentials: async (path: string) => {return ['admin','P@ssw0rd'] }
+    }    
+    mpsService = new MPSMicroservice(config,db,secrets, certs)
     mps = new MPSServer(mpsService)
 
     // DB initialization
@@ -187,13 +202,12 @@ describe('MPS Server', function () {
       port: config.port,
       clientName: 'hostname-prefix',
       uuid: '12345678-9abc-def1-2345-123456789000', // GUID template, last few chars of the string will be replaced
-      username: config.username, // mps username
-      password: config.pass, // mps password
+      username: 'admin', // mps username
+      password: 'P@ssw0rd', // mps password
       keepalive: 10000, // interval for keepalive ping
       debug: false,
       testciraState: 'USERAUTH_SUCCESS' // USERAUTH_SERVICE_ACCEPT, PFWD_SERVICE_ACCEPT, GLOBAL_REQUEST_SUCCESS, USERAUTH_SUCCESS, USERAUTH_FAILURE, PROTOCOL_VERSION_SENT, KEEPALIVE_REPLY
     }
-
     obj.ciraclient = require('./helper/ciraclient.js').CreateCiraClient(obj, args)
     obj.ciraclient.connect(function () {
       obj.ciraclient.disconnect()
@@ -209,8 +223,8 @@ describe('MPS Server', function () {
       port: config.port,
       clientName: 'hostname-prefix',
       uuid: '12345678-9abc-def1-2345-123456789000', // GUID template, last few chars of the string will be replaced
-      username: config.username, // mps username
-      password: config.pass, // mps password
+      username: 'admin', // mps username
+      password: 'P@ssw0rd', // mps password
       keepalive: 10000, // interval for keepalive ping
       debug: false,
       testciraState: 'USERAUTH_SERVICE_ACCEPT' // USERAUTH_SERVICE_ACCEPT, PFWD_SERVICE_ACCEPT, GLOBAL_REQUEST_SUCCESS, USERAUTH_SUCCESS, USERAUTH_FAILURE, PROTOCOL_VERSION_SENT, KEEPALIVE_REPLY
@@ -231,8 +245,8 @@ describe('MPS Server', function () {
       port: config.port,
       clientName: 'hostname-prefix',
       uuid: '12345678-9abc-def1-2345-123456789000', // GUID template, last few chars of the string will be replaced
-      username: config.username, // mps username
-      password: config.pass, // mps password
+      username: 'admin', // mps username
+      password: 'P@ssw0rd', // mps password
       keepalive: 10000, // interval for keepalive ping
       debug: false,
       testciraState: 'PFWD_SERVICE_ACCEPT' // USERAUTH_SERVICE_ACCEPT, PFWD_SERVICE_ACCEPT, GLOBAL_REQUEST_SUCCESS, USERAUTH_SUCCESS, USERAUTH_FAILURE, PROTOCOL_VERSION_SENT, KEEPALIVE_REPLY
@@ -253,8 +267,8 @@ describe('MPS Server', function () {
       port: config.port,
       clientName: 'hostname-prefix',
       uuid: '12345678-9abc-def1-2345-123456789000', // GUID template, last few chars of the string will be replaced
-      username: config.username, // mps username
-      password: config.pass, // mps password
+      username: 'admin', // mps username
+      password: 'P@ssw0rd', // mps password
       keepalive: 10000, // interval for keepalive ping
       debug: false,
       testciraState: 'GLOBAL_REQUEST_SUCCESS' // USERAUTH_SERVICE_ACCEPT, PFWD_SERVICE_ACCEPT, GLOBAL_REQUEST_SUCCESS, USERAUTH_SUCCESS, USERAUTH_FAILURE, PROTOCOL_VERSION_SENT, KEEPALIVE_REPLY
@@ -275,8 +289,8 @@ describe('MPS Server', function () {
       port: config.port,
       clientName: 'hostname-prefix',
       uuid: '12345678-9abc-def1-2345-123456789000', // GUID template, last few chars of the string will be replaced
-      username: config.username, // mps username
-      password: config.pass, // mps password
+      username: 'admin', // mps username
+      password: 'P@ssw0rd', // mps password
       keepalive: 10000, // interval for keepalive ping
       debug: false,
       testciraState: 'PROTOCOL_VERSION_SENT' // USERAUTH_SERVICE_ACCEPT, PFWD_SERVICE_ACCEPT, GLOBAL_REQUEST_SUCCESS, USERAUTH_SUCCESS, USERAUTH_FAILURE, PROTOCOL_VERSION_SENT, KEEPALIVE_REPLY
@@ -297,8 +311,8 @@ describe('MPS Server', function () {
       port: config.port,
       clientName: 'hostname-prefix',
       uuid: '12345678-9abc-def1-2345-123456789000', // GUID template, last few chars of the string will be replaced
-      username: config.username, // mps username
-      password: config.pass, // mps password
+      username: 'admin', // mps username
+      password: 'P@ssw0rd', // mps password
       keepalive: 10000, // interval for keepalive ping
       debug: false,
       testciraState: 'KEEPALIVE_REPLY' // USERAUTH_SERVICE_ACCEPT, PFWD_SERVICE_ACCEPT, GLOBAL_REQUEST_SUCCESS, USERAUTH_SUCCESS, USERAUTH_FAILURE, PROTOCOL_VERSION_SENT, KEEPALIVE_REPLY
@@ -319,7 +333,7 @@ describe('MPS Server', function () {
       port: config.port,
       clientName: 'hostname-prefix',
       uuid: '12345678-9abc-def1-2345-123456789000', // GUID template, last few chars of the string will be replaced
-      username: config.username, // mps username
+      username: 'admin', // mps username
       password: 'pasdbenaksd', // Invalid mps password
       keepalive: 10000, // interval for keepalive ping
       debug: false,

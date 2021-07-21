@@ -5,7 +5,9 @@
 import { validationResult } from 'express-validator'
 import { ErrorResponse } from '../../utils/amtHelper'
 import { logger as log } from '../../utils/logger'
-export async function disconnect (req, res): Promise<void> {
+import { Request, Response } from 'express'
+
+export async function disconnect (req: Request, res: Response): Promise<void> {
   try {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
@@ -20,7 +22,7 @@ export async function disconnect (req, res): Promise<void> {
         ciraconn.destroy()
         res.json({ success: 200, description: `CIRA connection disconnected : ${guid}` })
       } catch (error) {
-        log.error(error)
+        log.error(`cira connection destroy exception: ${error}`)
         res.status(500).json(ErrorResponse(500, error))
       }
     } else {

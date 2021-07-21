@@ -7,8 +7,9 @@ import { DeviceDb } from '../../db/device'
 import { Device } from '../../models/models'
 import { logger as log } from '../../utils/logger'
 import { MPSValidationError } from '../../utils/MPSValidationError'
+import { Request, Response } from 'express'
 
-export async function insertDevice (req, res): Promise<void> {
+export async function insertDevice (req: Request, res: Response): Promise<void> {
   const db = new DeviceDb()
   let device: Device
   try {
@@ -22,6 +23,7 @@ export async function insertDevice (req, res): Promise<void> {
       device.hostname = req.body.hostname ?? device.hostname
       device.tags = req.body.tags ?? device.tags
       device.connectionStatus = device.connectionStatus ?? false
+      device.mpsusername = req.body.mpsusername ?? device.mpsusername
       const results = await db.update(device)
       res.status(200).json(results)
     } else {
@@ -30,6 +32,7 @@ export async function insertDevice (req, res): Promise<void> {
         guid: req.body.guid,
         hostname: req.body.hostname ?? null,
         tags: req.body.tags ?? null,
+        mpsusername: req.body.mpsusername,
         mpsInstance: null
       }
       const results = await db.insert(device)

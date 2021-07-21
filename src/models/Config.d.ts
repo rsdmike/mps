@@ -5,12 +5,8 @@
 **********************************************************************/
 
 export interface configType {
-  use_allowlist: boolean
   common_name: string
   port: number
-  username: string
-  pass: string
-  use_global_mps_credentials: boolean
   country: string
   company: string
   listen_any: boolean
@@ -19,15 +15,13 @@ export interface configType {
   web_port: number
   generate_certificates: boolean
   alias_port?: number
-  debug?: boolean
-  logger_off: boolean
   secrets_path?: string
   data_path?: string
   cert_path: string
   cert_format: string
   vault_address?: string
   vault_token?: string
-  debug_level: number
+  mqtt_address?: string
   jwt_secret: string
   jwt_issuer: string
   jwt_expiration: number

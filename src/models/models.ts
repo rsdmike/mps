@@ -7,6 +7,7 @@ export interface Device {
   mpsInstance: string
   hostname: string
   guid: string
+  mpsusername: string
   tags: string[]
 }
 export interface Credentials {
@@ -18,4 +19,12 @@ export interface AMTCredential {
   mpspass: string
   amtuser: string
   amtpass: string
+}
+export type eventType = 'request' | 'success' | 'fail'
+export interface OpenAMTEvent {
+  type: eventType
+  message: string
+  methods: string[]
+  guid: string
+  timestamp: number
 }

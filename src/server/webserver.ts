@@ -9,22 +9,22 @@
 * @version v0.2.0c
 */
 
-import * as net from 'net'
-import * as tls from 'tls'
+import { Socket } from 'net'
+import { connect } from 'tls'
 import express from 'express'
-import * as http from 'http'
+import { createServer } from 'http'
 import * as parser from 'body-parser'
-
+import jws from 'jws'
 import { configType, certificatesType, queryParams } from '../models/Config'
 import { ErrorResponse } from '../utils/amtHelper'
 import { logger as log } from '../utils/logger'
 import { constants } from 'crypto'
 import { MPSMicroservice } from '../mpsMicroservice'
-import { IDbProvider } from '../models/IDbProvider'
+import { IDbProvider } from '../interfaces/IDbProvider'
 import AMTStackFactory from '../amt_libraries/amt-connection-factory'
 import routes from '../routes'
 
-import interceptor from '../utils/interceptor.js'
+import { CreateHttpInterceptor, CreateRedirInterceptor } from '../utils/interceptor'
 import WebSocket from 'ws'
 import { URL } from 'url'
 import cors from 'cors'
@@ -48,11 +48,26 @@ export class WebServer {
       this.config = this.mpsService.config
       this.certs = this.mpsService.certs
       this.app = express()
-      this.notificationwss = new WebSocket.Server({ noServer: true })
-      this.relaywss = new WebSocket.Server({ noServer: true })
+      const options: WebSocket.ServerOptions = {
+        noServer: true,
+        verifyClient: (info) => {
+          // verify JWT
+          try {
+            const valid = jws.verify(info.req.headers['sec-websocket-protocol'], 'HS256', this.config.jwt_secret)
+            if (!valid) {
+              return false
+            }
+          } catch (err) { // reject connection if problem with verify
+            return false
+          }
+          return true
+        }
+      }
+      this.notificationwss = new WebSocket.Server(options)
+      this.relaywss = new WebSocket.Server(options)
 
       // Create Server
-      this.server = http.createServer(this.app)
+      this.server = createServer(this.app)
       this.app.use(cors())
 
       // Handles the Bad JSON exceptions
@@ -130,20 +145,18 @@ export class WebServer {
           log.debug(`Opening web socket connection to ${params.host}: ${params.port}.`)
 
           // Fetch Intel AMT credentials & Setup interceptor
-          const credentials = await this.db.getAmtPassword(params.host)
-          // obj.debug("Credential for " + params.host + " is " + JSON.stringify(credentials));
-
+          const credentials = await this.mpsService.secrets.getAMTCredentials(params.host)
           if (credentials != null) {
             log.debug('Creating credential')
             if (params.p === 1) {
-              ws.interceptor = interceptor.CreateHttpInterceptor({
+              ws.interceptor = CreateHttpInterceptor({
                 host: params.host,
                 port: params.port,
                 user: credentials[0],
                 pass: credentials[1]
               })
             } else if (params.p === 2) {
-              ws.interceptor = interceptor.CreateRedirInterceptor({
+              ws.interceptor = CreateRedirInterceptor({
                 user: credentials[0],
                 pass: credentials[1]
               })
@@ -187,7 +200,7 @@ export class WebServer {
               }
               ws._socket.resume()
             } else {
-              ws.forwardclient = new net.Socket()
+              ws.forwardclient = new Socket()
               ws.forwardclient.setEncoding('binary')
               ws.forwardclient.forwardwsocket = ws
             }
@@ -205,7 +218,7 @@ export class WebServer {
                 constants.SSL_OP_CIPHER_SERVER_PREFERENCE,
               rejectUnauthorized: false
             }
-            ws.forwardclient = tls.connect(
+            ws.forwardclient = connect(
               params.port,
               params.host,
               tlsoptions,
@@ -220,7 +233,7 @@ export class WebServer {
           }
 
           // Add handlers to socket.
-          if (ws.forwardclient instanceof net.Socket) {
+          if (ws.forwardclient instanceof Socket) {
             // When we receive data on the TCP connection, forward it back into the web socket connection.
             ws.forwardclient.on('data', data => {
               if (ws.interceptor) {
@@ -320,7 +333,7 @@ export class WebServer {
         this.relaywss.emit('connection', ws, request)
       })
     } else { // Invalid endpoint
-      log.info('Route does not exist. Closing connection...')
+      log.debug('Route does not exist. Closing connection...')
       socket.write('HTTP/1.1 401 Unauthorized\r\n\r\n')
       socket.destroy()
     }
